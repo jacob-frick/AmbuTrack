@@ -15,6 +15,26 @@ router.get('/user', (req, res) => {
     .catch(e => console.error(e))
 })
 
+// DELETE a user by ID
+router.delete('/user/:id', (req, res) => {
+  User.destroy({ where: { id: req.params.id } })
+    .then(() => res.sendStatus(200))
+    .catch(e => console.error(e))
+})
+
+// View user by id
+router.get('/user/:id', (req, res) => {
+  User.findOne({ where: { id: req.params.id }})
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
+
+// Update user by ID
+router.get('/user/:id', (req, res) => {
+  User.update({ where: { id: req.params.id }})
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
 
 
 
