@@ -29,6 +29,12 @@ router.get('/user/:id', (req, res) => {
     .catch(e => console.error(e))
 })
 
+// Update user by ID
+router.get('/user/:id', (req, res) => {
+  User.update({ where: { id: req.params.id }})
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
 
 
 module.exports = router
