@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.use(require('./routes'))
+app.use(require('./Routes'))
 app.get('/', (req, res) => {
   res.render('home')
 })
