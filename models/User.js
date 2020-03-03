@@ -12,6 +12,18 @@ User.init({
     type: STRING,
     allowNull: false
   },
+  username: {
+    type: STRING,
+    allowNull: false,
+    unique: true
+  },
+  email: {
+    type: STRING,
+    allowNull:false,
+    validate: {
+      isEmail: true
+    }
+  },
   employer: {
     type: STRING,
     allowNull: false
