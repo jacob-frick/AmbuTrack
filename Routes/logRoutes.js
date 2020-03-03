@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Log } = require('./../models')
+const { Log } = require('../models')
 
 router.get('/log', (req, res) => {
     Log.findAll()
