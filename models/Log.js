@@ -5,7 +5,7 @@ class Log extends Model{}
 
 Log.init({
     date: {
-        type: String,
+        type: STRING,
         allowNull: false 
     },
     holdWall: {
