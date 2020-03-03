@@ -4,11 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFrick1992/AmbuTrack.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFrick1992/AmbuTrack/issues"
+  },
+  "homepage": "https://github.com/JFrick1992/AmbuTrack#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
