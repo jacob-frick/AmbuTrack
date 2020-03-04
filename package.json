@@ -1,17 +1,30 @@
 {
-  "name": "ambu-track",
+  "name": "ambutrack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFrick1992/AmbuTrack.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFrick1992/AmbuTrack/issues"
+  },
+  "homepage": "https://github.com/JFrick1992/AmbuTrack#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "mdbootstrap": "^4.14.0",
     "mysql2": "^2.1.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "sequelize": "^5.21.5"
   }
 }
