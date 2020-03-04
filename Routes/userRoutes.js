@@ -37,17 +37,18 @@ router.post('/user/:id', (req, res) => {
 })
 
 // view user by email
-router.get('/user/e/:email', (req, res) => {
+router.get('/user/email/:email', (req, res) => {
   User.findOne({ where: { email: req.params.email } })
     .then(users => res.json(users))
     .catch(e => console.error(e))
 })
 
 // view user by username
-router.get('/user/u/:username', (req, res) => {
+router.get('/user/username/:username', (req, res) => {
   User.findOne({ where: { username: req.params.username } })
     .then(users => res.json(users))
     .catch(e => console.error(e))
 })
+
 
 module.exports = router
