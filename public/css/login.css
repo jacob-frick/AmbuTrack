@@ -106,6 +106,7 @@ html {
     float: right;
     max-inline-size: max-content;
   }
+
   .loginLeadMessage {
     margin-top: 5rem;
   }
@@ -126,11 +127,15 @@ html {
   border-radius: .3rem;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
   cursor: pointer;
 }
 
-.btn.focus, .btn:focus {
+.btn.focus,
+.btn:focus {
   /* outline: 0; */
   box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .25);
 }
@@ -141,7 +146,8 @@ html {
   border: 1px solid #231f20;
 }
 
-[class*="ctrl-"][class*="fx-"]:hover, [class*="ctrl-"][class*="fx-"].active {
+[class*="ctrl-"][class*="fx-"]:hover,
+[class*="ctrl-"][class*="fx-"].active {
   color: #231f20;
 }
 
@@ -149,7 +155,8 @@ html {
   color: #231f20;
 }
 
-[class*="fx-"], [class*="fx-"]:hover {
+[class*="fx-"],
+[class*="fx-"]:hover {
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
@@ -173,7 +180,8 @@ html {
   width: 100%;
 }
 
-[class*="fx-bubble"]:hover::after, [class*="fx-bubble"].active::after {
+[class*="fx-bubble"]:hover::after,
+[class*="fx-bubble"].active::after {
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
   height: 300%;
@@ -183,7 +191,8 @@ html {
   height: 0;
 }
 
-body::after, body::before {
+body::after,
+body::before {
   content: none;
   display: block;
   position: absolute;
@@ -214,7 +223,17 @@ body::after, body::before {
     float: right;
     max-inline-size: max-content;
   }
+
   .createAccountTitle {
     margin-top: 5rem;
   }
+}
+
+.btnCreateNewUser {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-delay: 0.2s !important;
+  transition-delay: 0.2s !important;
+  overflow: hidden;
+  float: right;
 }

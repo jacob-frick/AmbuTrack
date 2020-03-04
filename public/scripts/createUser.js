@@ -12,3 +12,4 @@ document.getElementById('createUser').addEventListener('click', event => {
   event.preventDefault()
   createUser()
 })
+
