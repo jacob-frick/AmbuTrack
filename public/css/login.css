@@ -1,5 +1,21 @@
-.html {
+html {
   background-color: #759dd9;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #63b5fc;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .jumbotron {
@@ -10,6 +26,8 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gridContents {
@@ -22,9 +40,30 @@
 }
 
 .loginLifeStarImg {
-  width: 59px;
-  margin-top: -5rem;
+  width: 5rem;
+  margin-top: 2rem;
   float: right;
+}
+
+.headerAmbutrack {
+  font-size: 2.5rem;
+  */: ;
+  font-weight: 500;
+  /* line-height: 1.2; */
+  /* font-size: 2.5rem; */
+  margin-top: -1rem;
+  margin-top: -5rem;
+  /* line-height: 1.2; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.loginInputWidth {
+  margin-bottom: 1rem;
+  max-width: 20rem;
+  min-width: 10rem;
+  margin-left: 0rem;
 }
 
 .loginLeadMessage {
@@ -34,4 +73,147 @@
 .loginSecondaryMessage {
   margin-top: 2rem !important;
   margin-bottom: -1rem;
+}
+
+.loginBtn {
+  margin-top: 1rem;
+  margin-left: .09rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.blue-gradient {
+  background: linear-gradient(40deg, #0366bd, #4eb9f7) !important;
+}
+
+.peach-gradient {
+  background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+}
+
+.loginCreateAcctBtn {
+  margin-top: 1rem;
+  margin-right: 0rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .loginLifeStarImg {
+    width: 5rem;
+    margin-top: -1rem;
+    position: absolute;
+    float: right;
+    max-inline-size: max-content;
+  }
+  .loginLeadMessage {
+    margin-top: 5rem;
+  }
+}
+
+/* Button Effects */
+
+.btn.blue-gradient {
+  color: #fff;
+}
+
+.btn.peach-gradient {
+  color: #fff;
+}
+
+.btn {
+  border: 1px solid #000;
+  border-radius: .3rem;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn.focus, .btn:focus {
+  /* outline: 0; */
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .25);
+}
+
+[class*="ctrl-"] {
+  padding: 5ox 10px;
+  border-radius: 2px;
+  border: 1px solid #231f20;
+}
+
+[class*="ctrl-"][class*="fx-"]:hover, [class*="ctrl-"][class*="fx-"].active {
+  color: #231f20;
+}
+
+[class*="ctrl-"][class*="fx-"].is-reversed {
+  color: #231f20;
+}
+
+[class*="fx-"], [class*="fx-"]:hover {
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+[class*="fx-"]:not(.fx-dyna) {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-delay: 0.2s !important;
+  transition-delay: 0.2s !important;
+  overflow: hidden;
+}
+
+[class*="fx-bubble"]::after {
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+[class*="fx-bubble"]:hover::after, [class*="fx-bubble"].active::after {
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+  height: 300%;
+}
+
+[class*="fx-bubble"]:disabled:hover::after {
+  height: 0;
+}
+
+body::after, body::before {
+  content: none;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.createAccountLifeStarImg {
+  width: 5rem;
+  margin-top: -6rem;
+  float: right;
+}
+
+@media only screen and (max-width: 900px) {
+  .createAccountLifeStarImg {
+    width: 4rem;
+    margin-top: -4.5rem;
+    position: inherit;
+    float: right;
+    max-inline-size: max-content;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .createAccountLifeStarImg {
+    width: 4rem;
+    /* margin-top: -1rem; */
+    /* position: absolute; */
+    float: right;
+    max-inline-size: max-content;
+  }
+  .createAccountTitle {
+    margin-top: 5rem;
+  }
 }
