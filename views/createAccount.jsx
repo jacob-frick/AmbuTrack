@@ -25,7 +25,7 @@ const CreateAccount = props => {
                 </form>
                 <label htmlFor="accountCreateEmail">Email Address</label>
                 <input type="email" className="form-control" id="accountCreateEmail" aria-describedby="emailHelp" />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" className="form-text text-muted">We will share your email with anyone else.</small>
               </div>
               <div className="form-group">
                 <label htmlFor="accountCreateUserName">Username</label>

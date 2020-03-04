@@ -1,10 +1,10 @@
 const createUser = () => {
   axios.post('/api/user', {
-    firstName: document.getElementById('firstName').value,
-    lastName: document.getElementById('lastName').value,
-    usename: document.getElementById('usename').value,
-    email: document.getElementById('email').value,
-    employer: document.getElementById('employer').value
+    firstName: document.getElementById('accountCreateFirstName').value,
+    lastName: document.getElementById('accountCreateLastName').value,
+    usename: document.getElementById('accountCreateUserName').value,
+    email: document.getElementById('accountCreateEmail').value,
+    employer: document.getElementById('accountCreateEmployer').value
   })
 }
 
