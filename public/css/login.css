@@ -1,4 +1,4 @@
-.html {
+html {
   background-color: #759dd9;
 }
 
@@ -59,7 +59,6 @@
   text-align: center;
 }
 
-
 .loginInputWidth {
   margin-bottom: 1rem;
   max-width: 20rem;
@@ -107,21 +106,19 @@
     float: right;
     max-inline-size: max-content;
   }
-
   .loginLeadMessage {
     margin-top: 5rem;
   }
 }
 
 /* Button Effects */
+
 .btn.blue-gradient {
   color: #fff;
-
 }
 
 .btn.peach-gradient {
   color: #fff;
-
 }
 
 .btn {
@@ -129,15 +126,11 @@
   border-radius: .3rem;
 }
 
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled),
-button:not(:disabled) {
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
   cursor: pointer;
 }
 
-.btn.focus,
-.btn:focus {
+.btn.focus, .btn:focus {
   /* outline: 0; */
   box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .25);
 }
@@ -148,8 +141,7 @@ button:not(:disabled) {
   border: 1px solid #231f20;
 }
 
-[class*="ctrl-"][class*="fx-"]:hover,
-[class*="ctrl-"][class*="fx-"].active {
+[class*="ctrl-"][class*="fx-"]:hover, [class*="ctrl-"][class*="fx-"].active {
   color: #231f20;
 }
 
@@ -157,8 +149,7 @@ button:not(:disabled) {
   color: #231f20;
 }
 
-[class*="fx-"],
-[class*="fx-"]:hover {
+[class*="fx-"], [class*="fx-"]:hover {
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
@@ -182,8 +173,7 @@ button:not(:disabled) {
   width: 100%;
 }
 
-[class*="fx-bubble"]:hover::after,
-[class*="fx-bubble"].active::after {
+[class*="fx-bubble"]:hover::after, [class*="fx-bubble"].active::after {
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
   height: 300%;
@@ -193,10 +183,38 @@ button:not(:disabled) {
   height: 0;
 }
 
-body::after,
-body::before {
+body::after, body::before {
   content: none;
   display: block;
   position: absolute;
   z-index: -1;
+}
+
+.createAccountLifeStarImg {
+  width: 5rem;
+  margin-top: -6rem;
+  float: right;
+}
+
+@media only screen and (max-width: 900px) {
+  .createAccountLifeStarImg {
+    width: 4rem;
+    margin-top: -4.5rem;
+    position: inherit;
+    float: right;
+    max-inline-size: max-content;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .createAccountLifeStarImg {
+    width: 4rem;
+    /* margin-top: -1rem; */
+    /* position: absolute; */
+    float: right;
+    max-inline-size: max-content;
+  }
+  .createAccountTitle {
+    margin-top: 5rem;
+  }
 }
