@@ -5,6 +5,8 @@ const CreateAccount = props => {
     return (
       <Html>
         <h1>Create Account</h1>
+
+        <script src="./scripts/createUser"></script>
       </Html>
     )
   }

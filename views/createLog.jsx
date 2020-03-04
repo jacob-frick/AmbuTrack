@@ -36,6 +36,7 @@ const CreateLog = props => {
             </div>
         <button id="createLog" type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <script src="./scripts/createLog.js"></script>
         </Html>
     )
 }
