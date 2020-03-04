@@ -16,6 +16,6 @@ app.get('/', (req, res) => {
   res.render('home')
 })
 require('./config').sync()
-.then(() => app.listen(process.env.PORT || 3000))
-.catch((e) => console.log(e))
+  .then(() => app.listen(process.env.PORT || 3000))
+  .catch((e) => console.log(e))
 
