@@ -8,7 +8,7 @@ let uname = localStorage.getItem('uname')
 
 
 const createLog = () => {
-  axios.post('api/logs', {
+  axios.post('api/log', {
     date: document.getElementById('date').value,
     holdWall: document.getElementById('holdWall').value,
     bls: document.getElementById('bls').value,
@@ -22,3 +22,10 @@ document.getElementById('createLog').addEventListener('click', event => {
   createLog()
 })
 
+const signIn = (username) => {
+  axios.get(`api/username/${username || document.getElementById('username').value}`)
+  .then(()=>)
+
+
+
+}
