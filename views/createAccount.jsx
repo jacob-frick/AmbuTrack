@@ -33,9 +33,9 @@ const CreateAccount = props => {
               </div>
               <div className="form-group">
                 <label htmlFor="accountCreateEmployer">Employer Name</label>
-                <input type="Username" className="form-control" id="accountCreateUserName" />
+                <input type="Username" className="form-control" id="accountCreateEmployer" />
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button id="createUser" type="submit" className="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>
