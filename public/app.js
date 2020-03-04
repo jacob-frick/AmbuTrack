@@ -24,7 +24,7 @@ document.getElementById('createLog').addEventListener('click', event => {
 
 const signIn = (username) => {
   axios.get(`api/username/${username || document.getElementById('username').value}`)
-  .then()
+  .then(()=>)
 
 
 
