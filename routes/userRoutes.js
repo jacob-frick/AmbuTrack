@@ -30,12 +30,25 @@ router.get('/user/:id', (req, res) => {
 })
 
 // Update user by ID
-router.get('/user/:id', (req, res) => {
+router.post('/user/:id', (req, res) => {
   User.update({ where: { id: req.params.id }})
     .then(users => res.json(users))
     .catch(e => console.error(e))
 })
 
+// view user by email
+router.get('/user/email/:email', (req, res) => {
+  User.findOne({ where: { email: req.params.email } })
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
+
+// view user by username
+router.get('/user/username/:username', (req, res) => {
+  User.findOne({ where: { username: req.params.username } })
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
 
 
 module.exports = router
