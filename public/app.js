@@ -7,7 +7,6 @@ let uname = localStorage.getItem('uname')
 
 
 
-
 const createLog = () => {
   axios.post('api/logs', {
     date: document.getElementById('date').value,
@@ -18,4 +17,8 @@ const createLog = () => {
     cancels: document.getElementById('cancels').value
   })
 }
+document.getElementById('createLog').addEventListener('click', event => {
+  event.preventDefault()
+  createLog()
+})
 
