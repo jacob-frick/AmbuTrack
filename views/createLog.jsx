@@ -13,9 +13,10 @@ const CreateLog = props => {
                 <FormItem title='Enter times ALS' id='als' forItem='als' desc='alsInput' />
                 <FormItem title='Enter total number of calls' id='calls' forItem='calls' desc='callsInput' />
                 <FormItem title='Enter cancel times' id='cancels' forItem='cancels' desc='cancelsInput' />
+                <FormItem title='Enter location' id='location' forItem='location' desc='cancelsInput' />
                 <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
             </form>
-            <script src="../public/scripts/createLog.js"></script>
+            <script src="./public/scripts/createLog.js"></script>
         </Html>
     )
 }
