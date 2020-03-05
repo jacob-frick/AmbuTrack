@@ -6,10 +6,12 @@ const createUser = () => {
     email: document.getElementById('accountCreateEmail').value,
     employer: document.getElementById('accountCreateEmployer').value
   })
+
 }
 
 document.getElementById('createUser').addEventListener('click', event => {
   event.preventDefault()
   createUser()
+  
 })
 

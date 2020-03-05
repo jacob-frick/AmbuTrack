@@ -18,7 +18,7 @@ const Login = () => {
               <label htmlFor='email'>Email Address</label>
               <input type="email" className="row col form-control loginInputWidth" id="email"></input>
               <button id="signIn" type="button" className="btn blue-gradient ctrl-standard fx-bubbleDown loginBtn">Sign In</button>
-              <button id="goToCreateUserView" type="button" className="btn peach-gradient ctrl-standard fx-bubbleDown float-right loginCreateAcctBtn">Create Account</button>
+             <a href="/createAccount"> <button id="goToCreateUserView" type="button" className="btn peach-gradient ctrl-standard fx-bubbleDown float-right loginCreateAcctBtn">Create Account</button></a>
             </div>
           </form>
         </div>
