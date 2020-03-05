@@ -5,9 +5,9 @@ const Navbar = require('./components/navbar.jsx')
 const Dashboard = props => {
     return (
         <Html>
-            <Navbar uid={props.id}/>
+            <Navbar uid={props.id} />
             <h1>Dashboard</h1>
-            <h3>Userid: {props.firstName}</h3>
+            <h3>User: {props.firstName}</h3>
         </Html>
     )
 }

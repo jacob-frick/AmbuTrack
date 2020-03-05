@@ -5,8 +5,13 @@ const { axios, localStorage } = window
 let uid = localStorage.getItem('uid')
 let uname = localStorage.getItem('uname')
 
-
-
+const page = window.location.href
+document.getElementById('signIn').addEventListener('click', event => {
+  // TODO: get uid
+  // if (username && email) {
+  page = `/dashboard/${uid}`
+  // }
+})
 
 
 // const createUser = () => {
