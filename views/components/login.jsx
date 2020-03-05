@@ -3,7 +3,7 @@ const Login = () => {
   return (
     <div className="container outerContainer">
       <div className="row">
-        <h1 className="display-4 headerAmbutrack">AMBUTRACK</h1>
+        <h1 className="display-4 headerAmbutrack">AmbuTrack</h1>
         <div className="jumbotron col-md-12">
           <span className="gridContents">
             <img className="loginLifeStarImg" src="images/lifeStar.png"></img>

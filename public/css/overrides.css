@@ -1,5 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:600&display=swap');
+
 html {
-  background-color: #759dd9;
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .form-control {
@@ -46,14 +94,11 @@ html {
 }
 
 .headerAmbutrack {
-  font-size: 2.5rem;
-  */: ;
+  font-size: 4.5rem;
+  font-family: 'Maven Pro', sans-serif;
   font-weight: 500;
-  /* line-height: 1.2; */
-  /* font-size: 2.5rem; */
   margin-top: -1rem;
   margin-top: -5rem;
-  /* line-height: 1.2; */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
