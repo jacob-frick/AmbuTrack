@@ -40,7 +40,9 @@ const CreateAccount = props => {
           </div>
         </div>
       </div>
+      <script src="./scripts/createUser.js"></script>
     </Html>
+    
   )
 }
 module.exports = CreateAccount
