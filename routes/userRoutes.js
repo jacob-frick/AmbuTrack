@@ -4,7 +4,7 @@ const router = require('express').Router()
 // Create a user
 router.post('/user', (req, res) => {
   User.create(req.body)
-    .then(() => res.sendStatus(200))
+    .then(res.sendStatus(200))
     .catch(e => console.error(e))
 })
 
@@ -49,7 +49,6 @@ router.get('/user/username/:username', (req, res) => {
     .then(users => res.json(users))
     .catch(e => console.error(e))
 })
-
 
 
 module.exports = router

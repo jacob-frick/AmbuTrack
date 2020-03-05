@@ -1,36 +1,22 @@
 const React = require('react')
 const Html = require('./layouts/default.jsx')
+const Navbar = require('./components/navbar.jsx')
 const FormItem = require('./components/formItem.jsx')
 const CreateLog = props => {
     return (
         <Html>
-            <div className="container outerContainer">
-                <div className="row">
-                    <h1 className="display-4 headerAmbutrack">AMBUTRACK</h1>
-                    <div className="jumbotron col-md-12">
-                        <span className="gridContents">
-                            <h2>Shift Logs</h2>
-                            <img className="createAccountLifeStarImg" src="images/lifeStar.png"></img>
-                        </span>
-                        <form>
-                            <div className="form-group"></div>
-                        </form>
-            </div>
-        </div>
-    </div>
-
-        <form>
-            
-                <FormItem title='City' id='city' forItem='city' desc='cityCall' />
-                <FormItem title='Minutes Holding Wall' id='holdWall' forItem='holdWall' desc='minsHoldWall'/>
+            <Navbar uid={props.id} />
+            <form>
+                <FormItem title='Enter Date' id='date' forItem='date' desc='dateInput' />
+                <FormItem title='Minutes Holding Wall' id='holdWall' forItem='holdWall' desc='minsHoldWall' />
                 <FormItem title='Enter times BLS' id='bls' forItem='bls' desc='blsInput' />
-                <FormItem title='Enter times ALS' id='als' forItem='als' desc='alsInput'/>
-                <FormItem title='Enter total number of calls' id='calls' forItem='calls' desc='callsInput'/>
-                <FormItem title='Enter cancel times' id='cancels' forItem='cancels' desc='cancelsInput'/>
-
-        <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
-        </form>
-        <script src="./scripts/createLog.js"></script>
+                <FormItem title='Enter times ALS' id='als' forItem='als' desc='alsInput' />
+                <FormItem title='Enter total number of calls' id='calls' forItem='calls' desc='callsInput' />
+                <FormItem title='Enter cancel times' id='cancels' forItem='cancels' desc='cancelsInput' />
+                <FormItem title='Enter location' id='location' forItem='location' desc='cancelsInput' />
+                <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
+            </form>
+            <script src="./public/scripts/createLog.js"></script>
         </Html>
     )
 }
