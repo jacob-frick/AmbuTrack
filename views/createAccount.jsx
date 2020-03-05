@@ -19,7 +19,7 @@ const CreateAccount = props => {
                       <input id="firstName" type="text" className="form-control" placeholder="First Name" />
                     </div>
                     <div className="col">
-                      <input id="firstName" type="text" className="form-control" placeholder="Last Name" />
+                      <input id="lastName" type="text" className="form-control" placeholder="Last Name" />
                     </div>
                   </div>
                 </form>
