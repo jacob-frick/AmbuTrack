@@ -35,7 +35,7 @@ const CreateAccount = props => {
                 <label htmlFor="accountCreateEmployer">Employer Name</label>
                 <input type="Username" className="form-control" id="accountCreateEmployer" />
               </div>
-              <button type="submit" className="btn blue-gradient ctrl-standard fx-bubbleDown "id = "btnCreateNewUser">Submit</button>
+              <button type="submit" className="btn blue-gradient ctrl-standard fx-bubbleDown " id="createUser">Submit</button>
             </form>
           </div>
         </div>
