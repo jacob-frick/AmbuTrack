@@ -1,11 +1,11 @@
 console.log('ping')
-const page = window.location.href
 
 const { axios, localStorage } = window
 
 let uid = localStorage.getItem('uid')
 let uname = localStorage.getItem('uname')
 
+const page = window.location.href
 document.getElementById('signIn').addEventListener('click', event => {
   // TODO: get uid
   // if (username && email) {
@@ -23,11 +23,6 @@ document.getElementById('signIn').addEventListener('click', event => {
 //     employer: document.getElementById('employer').value
 //   })
 // }
-
-// document.getElementById('btnCreateUser').addEventListener('click', event => {
-//   event.preventDefault()
-//   createUser()
-// })
 
 
 
