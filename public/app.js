@@ -19,11 +19,10 @@ let uname = localStorage.getItem('uname')
 //   })
 // }
 
-// document.getElementById('createUser').addEventListener('click', event => {
-//   event.preventDefault()
-//   createUser()
-// })
-
+document.getElementById('goToCreateUserView').addEventListener('click', event => {
+  event.preventDefault()
+  window.location.href = "/createAccount"
+})
 
 
 

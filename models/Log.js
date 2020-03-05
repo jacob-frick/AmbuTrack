@@ -27,6 +27,10 @@ Log.init({
     cancels: {
         type: INTEGER,
         allowNull: false
+    },
+    location: {
+        type: STRING,
+        allowNull: false
     }
 }, {sequelize, modelName:'log'})
 
