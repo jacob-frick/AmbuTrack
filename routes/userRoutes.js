@@ -4,7 +4,7 @@ const router = require('express').Router()
 // Create a user
 router.post('/user', (req, res) => {
   User.create(req.body)
-    .then(() => res.sendStatus(200))
+    .then(res.sendStatus(200))
     .catch(e => console.error(e))
 })
 
