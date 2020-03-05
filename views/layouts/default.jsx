@@ -6,10 +6,11 @@ const Html = props => {
       <head>
         <meta charSet="UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon2.png" />
         <title>AmbuTrack</title>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous"></link>
         <link rel="stylesheet" type="text/css" href="css/overrides.css"></link>
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon2.png" />
+        <link rel="stylesheet" type="text/css" href="css/login.css"></link>
       </head>
       <body>
         {props.children}

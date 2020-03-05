@@ -5,7 +5,8 @@ const createLog = () => {
     bls: document.getElementById('bls').value,
     als: document.getElementById('als').value,
     calls: document.getElementById('calls').value,
-    cancels: document.getElementById('cancels').value
+    cancels: document.getElementById('cancels').value,
+    location: document.getElementById('location').value
   })
 }
 
