@@ -19,10 +19,6 @@ let uname = localStorage.getItem('uname')
 //   })
 // }
 
-document.getElementById('goToCreateUserView').addEventListener('click', event => {
-  event.preventDefault()
-  window.location.href = "/createAccount"
-})
 
 
 
