@@ -1,12 +1,17 @@
 console.log('ping')
+const page = window.location.href
 
 const { axios, localStorage } = window
 
 let uid = localStorage.getItem('uid')
 let uname = localStorage.getItem('uname')
 
-
-
+document.getElementById('signIn').addEventListener('click', event => {
+  // TODO: get uid
+  // if (username && email) {
+  page = `/dashboard/${uid}`
+  // }
+})
 
 
 // const createUser = () => {
@@ -19,10 +24,11 @@ let uname = localStorage.getItem('uname')
 //   })
 // }
 
-document.getElementById('goToCreateUserView').addEventListener('click', event => {
-  event.preventDefault()
-  window.location.href = "/createAccount"
-})
+// document.getElementById('btnCreateUser').addEventListener('click', event => {
+//   event.preventDefault()
+//   createUser()
+// })
+
 
 
 
