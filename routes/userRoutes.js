@@ -51,5 +51,4 @@ router.get('/user/username/:username', (req, res) => {
 })
 
 
-
 module.exports = router
