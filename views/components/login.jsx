@@ -3,7 +3,7 @@ const Login = () => {
   return (
     <div className="container outerContainer">
       <div className="row">
-        <h1 className="display-4 headerAmbutrack">AMBUTRACK</h1>
+        <h1 className="display-4 headerAmbutrack">AmbuTrack</h1>
         <div className="jumbotron col-md-12">
           <span className="gridContents">
             <img className="loginLifeStarImg" src="images/lifeStar.png"></img>
@@ -17,8 +17,8 @@ const Login = () => {
               <input type="text" className="row col form-control loginInputWidth" id="userName"></input>
               <label htmlFor='email'>Email Address</label>
               <input type="email" className="row col form-control loginInputWidth" id="email"></input>
-              <button id="signIn" type="button" className="btn blue-gradient ctrl-standard fx-bubbleDown loginBtn">Sign In</button>
-              <a href="/createAccount"> <button id="goToCreateUserView" type="button" className="btn peach-gradient ctrl-standard fx-bubbleDown float-right loginCreateAcctBtn">Create Account</button></a>
+              <button id="signIn" type="button" className="btn btn-hover blue-gradient loginBtn">Sign In</button>
+              <a href="/createAccount"> <button id="goToCreateUserView" type="button" className="btn btn-hover peach-gradient float-right loginCreateAcctBtn">Create Account</button></a>
             </div>
           </form>
         </div>
