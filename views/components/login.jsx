@@ -18,12 +18,12 @@ const Login = () => {
               <label htmlFor='email'>Email Address</label>
               <input type="email" className="row col form-control loginInputWidth" id="email"></input>
               <button id="signIn" type="button" className="btn btn-hover blue-gradient loginBtn">Sign In</button>
-              <a href="/createAccount"> <button id="goToCreateUserView" type="button" className="btn btn-hover peach-gradient float-right loginCreateAcctBtn">Create Account</button></a>
+              <a href="/createAccount"><button id="goToCreateUserView" type="button" className="btn btn-hover peach-gradient float-right loginCreateAcctBtn">Create Account</button></a>
             </div>
           </form>
         </div>
       </div>
-      <script src="../../public/scripts/login.js"></script>
+      <script src="./scripts/login.js"></script>
     </div>
   )
 }

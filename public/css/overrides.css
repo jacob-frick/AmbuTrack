@@ -165,6 +165,10 @@ body {
   background-image: linear-gradient(to left, #3285e9, #23c5fa, #3867ff, #25aae1);
 }
 
+.aqua-gradient {
+  background-image: linear-gradient(to left, #00515f, #0081ac, #58c7f3, #6ad5ff);
+}
+
 .peach-gradient {
   background-image: linear-gradient(to left, #e85a19, #fa7199, #e43603, #f3b335);
 }
@@ -186,12 +190,6 @@ body::before {
   display: block;
   position: absolute;
   z-index: -1;
-}
-
-.createAccountLifeStarImg {
-  width: 5rem;
-  margin-top: -6rem;
-  float: right;
 }
 
 .headerAmbutrack {
