@@ -35,7 +35,7 @@ const CreateAccount = props => {
                 <label htmlFor="employer">Employer Name</label>
                 <input type="text" className="form-control" id="employer" />
               </div>
-              <a href="/"><button type="submit" className="btn btn-hover blue-gradient" id="btnCreateUser">Submit</button></a>
+              <a href="/"><button type="submit" className="btn btn-hover aqua-gradient float-right" id="btnCreateUser">Submit</button></a>
             </form>
           </div>
         </div>

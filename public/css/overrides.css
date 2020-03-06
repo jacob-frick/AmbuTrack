@@ -118,7 +118,9 @@ End Sidebar stuff
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-
+.text-muted {
+  color: #ffffff !important;
+}
 .jumbotron {
   border: 1px solid #000;
   border-radius: 1rem;
@@ -126,12 +128,13 @@ End Sidebar stuff
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  max-width: 90%;
+  max-width: 100%;
+  color: #fff !important;
   margin-left: auto;
   margin-right: auto;
+  background-color: #00a8f3;
+  font-weight: 400;
 }
-
-
 
 .outerContainer {
   margin-top: 5rem;
@@ -190,6 +193,10 @@ End Sidebar stuff
   -ms-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   box-shadow: none !important;
   font-family: 'Maven Pro',sans-serif !important;
+  font-size: larger;
+  font-weight: 700;
+  text-align: justify;
+  font-stretch: expanded;
 }
 
 .btn-hover:hover {
@@ -200,6 +207,7 @@ End Sidebar stuff
   transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -moz-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -ms-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
+      
 }
 
 .btn-hover:focus {
@@ -211,7 +219,7 @@ End Sidebar stuff
 }
 
 .aqua-gradient {
-  background-image: linear-gradient(to left, #00515f, #0081ac, #58c7f3, #6ad5ff);
+  background-image: linear-gradient(to left, #32f25e, #00d17e, #04db89, #28a745);
 }
 
 .peach-gradient {
