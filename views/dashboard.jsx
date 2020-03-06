@@ -31,6 +31,8 @@ const Dashboard = props => {
                     })}
                 </div>
             </SideBar>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="./scripts/dashboard.js"></script>
         </Html>
     )
 }
