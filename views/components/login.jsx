@@ -14,7 +14,7 @@ const Login = () => {
           <form>
             <div className="form-group loginInputWidth">
               <label htmlFor='username'>Username</label>
-              <input type="text" className="row col form-control loginInputWidth" id="username"></input>
+              <input type="text" className="row col form-control loginInputWidth" id="userName"></input>
               <label htmlFor='email'>Email Address</label>
               <input type="email" className="row col form-control loginInputWidth" id="email"></input>
               <button id="signIn" type="button" className="btn btn-hover blue-gradient loginBtn">Sign In</button>
@@ -23,7 +23,6 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <script src="../../public/scripts/login.js"></script>
     </div>
   )
 }
