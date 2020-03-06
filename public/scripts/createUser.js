@@ -12,7 +12,7 @@ const createUser = () => {
 
 document.getElementById('btnCreateUser').addEventListener('click', event => {
   event.preventDefault()
-  console.log('ping')
   createUser()
+  window.location.href = '/login'
 })
 

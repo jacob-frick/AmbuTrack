@@ -27,6 +27,8 @@ router.delete('/log/:id', (req, res) => {
       .then(() => res.sendStatus(200))
       .catch(e => console.error(e))
   })
+
+// Get all logs by user Id linked to logs
 router.get('/log/user/:uid', (req, res)=> {
     Log.findAll({where: { userId: req.params.uid}})
     .then(logs =>{

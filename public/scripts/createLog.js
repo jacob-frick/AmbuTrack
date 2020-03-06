@@ -1,3 +1,5 @@
+
+
 const createLog = () => {
   axios.post('api/log', {
     date: document.getElementById('date').value,
@@ -6,13 +8,13 @@ const createLog = () => {
     als: document.getElementById('als').value,
     calls: document.getElementById('calls').value,
     cancels: document.getElementById('cancels').value,
-    location: document.getElementById('location').value
+    location: document.getElementById('location').value,
+    
   })
 }
 
 document.getElementById('createLog').addEventListener('click', event => {
   event.preventDefault()
-  console.log('ping')
   createLog()
 })
 
