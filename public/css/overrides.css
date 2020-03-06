@@ -1,61 +1,108 @@
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro:600&display=swap');
-
-html,
+/* html {
+  background-color: #759dd9;
+} */
 body {
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  font-size: .875rem;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-    background-color: #495057;
-  }
-
-  to {
-    opacity: 1;
-    background-color: #ffffff;
-  }
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
 }
 
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-    background-color: #495057;
-  }
+/*
+* Sidebar
+*/
 
-  to {
-    opacity: 1;
-    background-color: #ffffff;
-  }
+.sidebar {
+  position: fixed;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    background-color: #495057;
-  }
-
-  to {
-    opacity: 1;
-    background-color: #ffffff;
-  }
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px;
+  /* Height of navbar */
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
 }
 
-@-o-keyframes fadein {
-  from {
-    opacity: 0;
-    background-color: #495057;
-  }
-
-  to {
-    opacity: 1;
-    background-color: #ffffff;
-  }
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
 }
 
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+* Navbar
+*/
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*
+* Utilities
+*/
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+/*
+End Sidebar stuff
+*/
 .form-control {
   display: block;
   width: 100%;
@@ -84,9 +131,7 @@ body {
   margin-right: auto;
 }
 
-.gridContents {
-  /* display: grid; */
-}
+
 
 .outerContainer {
   margin-top: 5rem;
