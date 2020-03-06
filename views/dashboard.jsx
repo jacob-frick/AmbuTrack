@@ -8,6 +8,7 @@ const Dashboard = props => {
             <Navbar uid={props.id} />
             <h1>Dashboard</h1>
             <h3>User: {props.firstName}</h3>
+            <script src="./scripts/dashboard.js"></script>
         </Html>
     )
 }

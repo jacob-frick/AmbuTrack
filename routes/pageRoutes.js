@@ -1,11 +1,14 @@
 const router = require('express').Router()
 const { User, Log } = require('./../models')
+
 router.get('/', (req, res) => {
     res.render('home')
 })
+
 router.get('/createAccount', (req, res) => {
     res.render('createAccount')
 })
+
 router.get('/dashboard/:uid', (req, res) => {
     User.findOne({ where: { id: req.params.uid } })
         .then(users => {
@@ -17,9 +20,11 @@ router.get('/dashboard/:uid', (req, res) => {
 router.get('/profile/:uid', (req, res) => {
     res.render('profile', { uid: req.params.uid })
 })
+
 router.get('/createLog', (req, res) => {
     res.render('createLog')
 })
+
 router.get('/log/:lid', (req, res) => {
     Log.findOne({ where: { id: req.params.lid } })
     .then(log => {
@@ -27,6 +32,11 @@ router.get('/log/:lid', (req, res) => {
     })
     .catch(e => console.error(e))
 })
+
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
 router.get('/**', (req, res) => {
     res.redirect('/')
 })

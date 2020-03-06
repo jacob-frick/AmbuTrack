@@ -31,10 +31,6 @@ const CreateAccount = props => {
                 <label htmlFor="username">username</label>
                 <input type="text" className="form-control" id="username" />
               </div>
-              {/* <div className="form-group">
-                <label htmlFor="userName">Username</label>
-                <input type="text" className="form-control" id="userName" />
-              </div> */}
               <div className="form-group">
                 <label htmlFor="employer">Employer Name</label>
                 <input type="text" className="form-control" id="employer" />
