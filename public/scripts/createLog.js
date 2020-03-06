@@ -1,3 +1,4 @@
+const id = localStorage.getItem('id')
 
 
 const createLog = () => {
@@ -9,12 +10,13 @@ const createLog = () => {
     calls: document.getElementById('calls').value,
     cancels: document.getElementById('cancels').value,
     location: document.getElementById('location').value,
-    
+    userId: id
   })
 }
 
 document.getElementById('createLog').addEventListener('click', event => {
   event.preventDefault()
   createLog()
+  window.location.href = `/dashboard/${id}`
 })
 
