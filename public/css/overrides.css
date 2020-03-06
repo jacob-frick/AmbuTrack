@@ -1,9 +1,11 @@
 html {
   background-image:url(../images/ambulanceHell.jpeg)!important;
+  background-color: #a5345400;
 }
 
 body {
   font-size: .875rem;
+  background-color: #a5345400;
 }
 
 p {
