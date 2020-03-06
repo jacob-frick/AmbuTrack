@@ -6,7 +6,10 @@ const CreateLog = props => {
     return (
         <Html>
             <Navbar uid={props.id} />
+            <div>
+                
             <form>
+                <FormItem title='City' id='city' forItem='city' desc='cityInput' />
                 <FormItem title='Enter Date' id='date' forItem='date' desc='dateInput' />
                 <FormItem title='Minutes Holding Wall' id='holdWall' forItem='holdWall' desc='minsHoldWall' />
                 <FormItem title='Enter times BLS' id='bls' forItem='bls' desc='blsInput' />
@@ -16,6 +19,7 @@ const CreateLog = props => {
                 <FormItem title='Enter location' id='location' forItem='location' desc='cancelsInput' />
                 <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
             </form>
+            </div>
             <script src="./public/scripts/createLog.js"></script>
         </Html>
     )
