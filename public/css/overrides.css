@@ -93,23 +93,6 @@ body {
   margin-bottom: 2rem;
 }
 
-.loginLifeStarImg {
-  width: 5rem;
-  margin-top: 2rem;
-  float: right;
-}
-
-.headerAmbutrack {
-  font-size: 4.5rem;
-  font-family: 'Maven Pro', sans-serif;
-  font-weight: 500;
-  margin-top: -1rem;
-  margin-top: -5rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .loginInputWidth {
   margin-bottom: 1rem;
   max-width: 20rem;
@@ -118,7 +101,7 @@ body {
 }
 
 .loginLeadMessage {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .loginSecondaryMessage {
@@ -142,23 +125,7 @@ body {
   -o-transition: .5s ease-in-out;
 }
 
-@media only screen and (max-width: 600px) {
-  .loginLifeStarImg {
-    width: 5rem;
-    margin-top: -1rem;
-    position: absolute;
-    float: right;
-    max-inline-size: max-content;
-  }
-
-  .loginLeadMessage {
-    margin-top: 5rem;
-  }
-}
-
 /* Button Effects */
-
-
 .btn-hover {
   color: #fff;
   cursor: pointer;
@@ -174,6 +141,10 @@ body {
   -moz-border-radius: .3rem;
   -ms-border-radius: .3rem;
   -o-border-radius: .3rem;
+  -moz-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
+  -ms-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
+  box-shadow: none !important;
+  font-family: 'Maven Pro',sans-serif !important;
 }
 
 .btn-hover:hover {
@@ -191,13 +162,11 @@ body {
 }
 
 .blue-gradient {
-  background-image: linear-gradient(to left, #3285e9, #23c5fa, #38e4ff, #25aae1);
-  box-shadow: 0 4px 15px 0 rgba(0, 135, 255, 0.75);
+  background-image: linear-gradient(to left, #3285e9, #23c5fa, #3867ff, #25aae1);
 }
 
 .peach-gradient {
-  background-image: linear-gradient(to left, #e85a19, #fa7199, #e43603, #f5ce62);
-  box-shadow: 0 4px 15px 0 rgba(212, 55, 2, 0.75);
+  background-image: linear-gradient(to left, #e85a19, #fa7199, #e43603, #f3b335);
 }
 
 .btn:focus {
@@ -225,28 +194,40 @@ body::before {
   float: right;
 }
 
+.headerAmbutrack {
+  font-size: 4.5rem;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  margin-top: -1rem;
+  margin-top: -4rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.ambutrackHeaderLogo {
+  width: 90% !important;
+  margin: 1rem;
+  margin-top: -4.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1200px) {
+  
+}
+
 @media only screen and (max-width: 900px) {
-  .createAccountLifeStarImg {
-    width: 4rem;
-    margin-top: -4.5rem;
-    position: inherit;
-    float: right;
-    max-inline-size: max-content;
-  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
 }
 
 @media only screen and (max-width: 600px) {
-  .createAccountLifeStarImg {
-    width: 4rem;
-    /* margin-top: -1rem; */
-    /* position: absolute; */
-    float: right;
-    max-inline-size: max-content;
-  }
 
-  .createAccountTitle {
-    margin-top: 5rem;
-  }
 }
 
 .btnCreateNewUser {

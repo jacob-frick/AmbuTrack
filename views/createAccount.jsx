@@ -5,11 +5,9 @@ const CreateAccount = props => {
     <Html>
       <div className="container outerContainer">
         <div className="row">
-          <h1 className="display-4 headerAmbutrack">AmbuTrack</h1>
+          <img className="ambutrackHeaderLogo" src="images/customLogoOne.png"></img>
           <div className="jumbotron col-md-12">
             <span className="gridContents">
-              <h2>Create Account</h2>
-              <img className="createAccountLifeStarImg" src="images/lifeStar.png"></img>
             </span>
             <form>
               <div className="form-group">
@@ -37,7 +35,7 @@ const CreateAccount = props => {
                 <label htmlFor="employer">Employer Name</label>
                 <input type="text" className="form-control" id="employer" />
               </div>
-              <button type="submit" className="btn btn-hover blue-gradient" id="btnCreateUser">Submit</button>
+              <a href="/"><button type="submit" className="btn btn-hover blue-gradient" id="btnCreateUser">Submit</button></a>
             </form>
           </div>
         </div>
