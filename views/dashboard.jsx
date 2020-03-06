@@ -6,7 +6,8 @@ const Dashboard = props => {
     return (
         <Html>
             <Navbar uid={props.id} />
-            <h1 id="name">Dashboard</h1>
+            <h1>Welcome!!</h1>
+            <h2 id="name"></h2>
             <h3>User: {props.firstName}</h3>
             <script src="./scripts/dashboard.js"></script>
         </Html>
