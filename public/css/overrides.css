@@ -1,16 +1,17 @@
 html {
-  background-image:url(../images/ambulanceHell.jpeg)!important;
-  background-color: #a5345400;
+  background-image: url(../images/ambulanceHell.jpeg) !important;
+  background-color: transparent;
 }
 
 body {
   font-size: .875rem;
-  background-color: #a5345400;
+  background-color: transparent;
 }
 
 p {
-  font-family: 'Maven Pro', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif !important;
+  font-family: 'Maven Pro', sans-serif !important;
 }
+
 
 label {
   display: inline-block;
@@ -149,10 +150,16 @@ End Sidebar stuff
   color: #fff !important;
   margin-left: auto;
   margin-right: auto;
-  background-color: #00a8f3;
+  background-color: #005b83;
   font-weight: 400;
 }
-
+.mb-4,
+.my-4 {
+  margin-bottom: 0.5rem !important;
+  margin-top: 2.5rem !important;
+  border-bottom: 1px double #fff;
+  width: 30%;
+}
 .outerContainer {
   margin-top: 5rem;
   margin-bottom: 2rem;
@@ -162,19 +169,24 @@ End Sidebar stuff
   margin-bottom: 1rem;
   max-width: 20rem;
   min-width: 10rem;
-  margin-left: 0rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lead {
   font-size: 1.5rem;
   font-weight: 300;
-  font-family: 'Maven Pro', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif !important;
+  font-family: 'Maven Pro', sans-serif !important;
 
 }
 
 .loginSecondaryMessage {
   margin-top: 2rem !important;
-  margin-bottom: -1rem;
+  margin-bottom: -2rem;
+  text-align: center;
+  font-size: x-large;
+  font-variant: all-small-caps;
+  font-weight: 600;
 }
 
 .loginBtn {
@@ -216,7 +228,7 @@ End Sidebar stuff
   font-weight: 700;
   text-align: justify;
   font-stretch: expanded;
-  font-family: 'Maven Pro', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif !important;
+  font-family: 'Maven Pro', sans-serif !important;
 }
 
 .btn-hover:hover {
@@ -259,7 +271,7 @@ button:not(:disabled) {
 
 body::after,
 body::before {
-  content: none;
+  content: '';
   display: block;
   position: absolute;
   z-index: -1;
@@ -273,13 +285,13 @@ body::before {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-family: 'Maven Pro', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif !important;
+  font-family: 'Maven Pro', sans-serif !important;
 }
 
 .ambutrackHeaderLogo {
-  width: 90% !important;
+  width: 70% !important;
   margin: 1rem;
-  margin-top: -4.5rem;
+  margin-top: -5rem;
   margin-left: auto;
   margin-right: auto;
 }
