@@ -1,6 +1,19 @@
-const page = window.location.href
-document.getElementById('createAccount').addEventListener('click', event => {
-  if (!(page = '/createAccount')) {
-    page = "/createAccount"
-  }
-})
+
+document.getElementById('signIn').addEventListener('click', event => {
+  event.preventDefault()
+    axios.get(`/api/user/username/${document.getElementById('userName').value}`)
+      .then((data) => {
+        
+        localStorage.setItem('firstName', data.data.firstName)
+        localStorage.setItem('lastName', data.data.lastName)
+        localStorage.setItem('userName', data.data.username)
+        localStorage.setItem('email', data.data.email)
+        window.location.href = '/dashboard'
+      })
+      .catch(error => {
+        window.location.href = '/createAccount'
+      })
+  })
+
+
+

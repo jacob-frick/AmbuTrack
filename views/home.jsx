@@ -10,6 +10,7 @@ const Home = props => {
   return (
     <Html>
       <Login />
+      <script src="./scripts/login.js"></script>
     </Html>
   )
 }

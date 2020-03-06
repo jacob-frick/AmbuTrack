@@ -12,6 +12,7 @@ const createLog = () => {
 
 document.getElementById('createLog').addEventListener('click', event => {
   event.preventDefault()
+  console.log('ping')
   createLog()
 })
 
