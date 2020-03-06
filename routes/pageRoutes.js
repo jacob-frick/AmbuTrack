@@ -10,11 +10,17 @@ router.get('/createAccount', (req, res) => {
 })
 
 router.get('/dashboard/:uid', (req, res) => {
-    User.findOne({ where: { id: req.params.uid } })
-        .then(users => {
-            res.render('dashboard', JSON.parse(JSON.stringify(users)))
+    Log.findAll({ where: { userId: req.params.uid } })
+        .then(logs =>{
+            const l = JSON.parse(JSON.stringify(logs))
+            let arr = []
+            l.forEach(elem => {
+                arr.push(elem)
+            })
+            res.render('dashboard',{log: arr})
         })
         .catch(e => console.error(e))
+
 })
 
 router.get('/profile/:uid', (req, res) => {

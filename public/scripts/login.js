@@ -8,6 +8,7 @@ document.getElementById('signIn').addEventListener('click', event => {
         localStorage.setItem('lastName', data.data.lastName)
         localStorage.setItem('userName', data.data.username)
         localStorage.setItem('email', data.data.email)
+        localStorage.setItem('id', data.data.id)
         window.location.href = '/dashboard'
       })
       .catch(error => {
