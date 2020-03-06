@@ -9,7 +9,7 @@ document.getElementById('signIn').addEventListener('click', event => {
         localStorage.setItem('userName', data.data.username)
         localStorage.setItem('email', data.data.email)
         localStorage.setItem('id', data.data.id)
-        window.location.href = '/dashboard'
+        window.location.href = `/dashboard/${data.data.id}`
       })
       .catch(error => {
         window.location.href = '/createAccount'
