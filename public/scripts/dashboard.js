@@ -1,6 +1,19 @@
 const firstName = localStorage.getItem('firstName')
 const lastName = localStorage.getItem('lastName')
-console.log(firstName)
-console.log(lastName)
+// gets userid from local storage passed down from login
+const id = localStorage.getItem('id')
+//initializes logData array
+let logData = []
 
-document.getElementById('name').innerHTML = (`${firstName} ${lastName}`)
+const renderLog = _=> {
+  axios.get(`/api/log/user/${id}`)
+    .then((data) => {
+      console.log(data)
+      logData = data.data
+      console.log(logData)
+    })
+}
+
+renderLog()
+
+  
