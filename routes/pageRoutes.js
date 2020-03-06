@@ -12,7 +12,12 @@ router.get('/createAccount', (req, res) => {
 router.get('/dashboard/:uid', (req, res) => {
     Log.findAll({ where: { userId: req.params.uid } })
         .then(logs =>{
-            res.render('dashboard',{user: req.body, logs: JSON.parse(JSON.stringify(logs))})
+            const l = JSON.parse(JSON.stringify(logs))
+            let arr = []
+            l.forEach(elem => {
+                arr.push(elem)
+            })
+            res.render('dashboard',{log: arr})
         })
         .catch(e => console.error(e))
 
