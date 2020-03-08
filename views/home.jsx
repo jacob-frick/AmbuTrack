@@ -8,7 +8,7 @@ const Jumbotron = require('./components/account.jsx')
 
 const Home = props => {
   return (
-    <Html>
+    <Html bclass='b-login'>
       <Login />
       <script src="./scripts/login.js"></script>
     </Html>

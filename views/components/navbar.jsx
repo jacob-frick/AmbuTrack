@@ -2,7 +2,7 @@ const React = require('react')
 const Navbar = props => {
   return (
     <nav className="navbar navbar-expand-sm sticky-top navbar-dark bg-dark flex-md-nowrap">
-      <a className="navbar-brand" href="#">Navbar</a>
+      <a className="navbar-brand" href="#">{props.user.firstName + ' ' + props.user.lastName}</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

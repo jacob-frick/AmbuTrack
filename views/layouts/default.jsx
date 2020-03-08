@@ -12,7 +12,7 @@ const Html = props => {
         <link rel="stylesheet" type="text/css" href="/css/overrides.css"></link>
         <link rel="shortcut icon" href="images/favicon.png" />
       </head>
-      <body>
+      <body className={props.bclass}>
         {props.children}
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossOrigin='anonymous'></script>

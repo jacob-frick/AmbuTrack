@@ -9,7 +9,7 @@ const SideBar = props => {
                         <ul className="nav flex-column mt-3">
                             <li className="nav-item"><a className="nav-link" href="#">Dashboard</a></li>
                             <li className="nav-item"><a className="nav-link" href="#">Profile</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Create Log</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/createLog">Create Log</a></li>
                         </ul>
                     </div>
                 </nav>

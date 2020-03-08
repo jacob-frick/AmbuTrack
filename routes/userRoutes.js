@@ -29,6 +29,13 @@ router.get('/user/:id', (req, res) => {
     .catch(e => console.error(e))
 })
 
+// view user by email
+router.get('/user/email/:email', (req, res) => {
+  User.findOne({ where: { email: req.params.email } })
+    .then(users => res.json(users))
+    .catch(e => console.error(e))
+})
+
 // Update user by ID
 router.post('/user/:id', (req, res) => {
   User.update({ where: { id: req.params.id }})
