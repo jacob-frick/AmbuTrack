@@ -5,7 +5,7 @@ const FormItem = require('./components/formItem.jsx')
 const CreateLog = props => {
     return (
         <Html>
-            <Navbar uid={props.id} />
+            <Navbar user={props.userData} />
             <div className="container">
                 <form>
                     <FormItem title='Enter Date' id='date' forItem='date' desc='dateInput' />

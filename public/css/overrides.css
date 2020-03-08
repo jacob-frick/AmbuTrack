@@ -1,6 +1,14 @@
 .b-login {
-  background-image:url(../images/ambulanceHell.jpeg)!important;
+  background-image:url(../images/EMTblue.jpg)!important;
   background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  overflow: hidden
 }
 
 body {
@@ -140,17 +148,11 @@ End Sidebar stuff
 }
 
 .jumbotron {
-  border: 1px solid #000;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
   max-width: 95%;
   color: #fff !important;
   margin-left: auto;
   margin-right: auto;
-  background-color: #005b83;
+  background-color:transparent;
   font-weight: 400;
 }
 .mb-4,

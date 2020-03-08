@@ -37,8 +37,11 @@ router.get('/profile/:uid', (req, res) => {
     res.render('profile', { uid: req.params.uid })
 })
 
-router.get('/createLog', (req, res) => {
-    res.render('createLog')
+router.get('/createLog/:uid', (req, res) => {
+    User.findOne({where: {id: req.params.uid}})
+    .then(user=> {
+        res.render('createLog',{userData:  JSON.parse(JSON.stringify(user))})
+    })
 })
 
 router.get('/log/:lid', (req, res) => {
