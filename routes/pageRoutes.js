@@ -12,15 +12,25 @@ router.get('/createAccount', (req, res) => {
 router.get('/dashboard/:uid', (req, res) => {
     Log.findAll({ where: { userId: req.params.uid } })
         .then(logs =>{
-            const l = JSON.parse(JSON.stringify(logs))
-            let arr = []
-            l.forEach(elem => {
-                arr.push(elem)
+            let l = JSON.parse(JSON.stringify(logs))
+            l.sort((left, right) => {
+                let ld = left.date.split('/')
+                let rd = right.date.split('/')
+                if(parseInt(ld[2]) === parseInt(rd[2])) {
+                    if(parseInt(ld[0]) === parseInt(rd[0])){
+                        return parseInt(rd[1]) - parseInt(ld[1])
+                    }
+                    return parseInt(rd[0]) - parseInt(ld[0])
+                } 
+                return parseInt(rd[2]) - parseInt(ld[2])
+                
             })
-            res.render('dashboard',{log: arr})
+            User.findOne({where: {id: req.params.uid}})
+            .then(user=> {
+                res.render('dashboard',{log: l, userData:  JSON.parse(JSON.stringify(user))})
+            })
         })
         .catch(e => console.error(e))
-
 })
 
 router.get('/profile/:uid', (req, res) => {
@@ -43,7 +53,4 @@ router.get('/dashboard', (req, res) => {
     res.render('dashboard')
 })
 
-router.get('/**', (req, res) => {
-    res.redirect('/')
-})
 module.exports = router

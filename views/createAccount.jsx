@@ -2,7 +2,7 @@ const React = require('react')
 const Html = require('./layouts/default.jsx')
 const CreateAccount = props => {
   return (
-    <Html>
+    <Html bclass='b-login'>
       <div className="container outerContainer">
         <div className="row">
           <img className="ambutrackHeaderLogo" src="images/customLogoOne.png"></img>
