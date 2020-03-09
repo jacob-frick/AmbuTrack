@@ -1,4 +1,8 @@
-
+localStorage.setItem('firstName', '')
+localStorage.setItem('lastName', '')
+localStorage.setItem('userName', '')
+localStorage.setItem('email', '')
+localStorage.setItem('id', '')
 document.getElementById('signIn').addEventListener('click', event => {
   event.preventDefault()
     axios.get(`/api/user/username/${document.getElementById('userName').value}`)
