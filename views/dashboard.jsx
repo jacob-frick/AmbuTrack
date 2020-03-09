@@ -9,7 +9,8 @@ const Dashboard = props => {
             <Navbar user={props.userData} />
             <SideBar uid={props.userData}>
                 <Accordion log={props.log} />
-            </SideBar >
+            </SideBar>
+            <script defer src="/scripts/dashboard.js"></script>
         </Html >
     )
 }

@@ -5,7 +5,7 @@ const Accordion = props => {
         <div id="accordion">
             {props.log.map((elem, index) => {
                 return (
-                    <LogCard elem={elem} index={index} key={`logCardKey${index}`} />
+                    <LogCard elem={elem} index={index} key={`logCardKey${elem.id}`} />
                 )
             })}
         </div>
