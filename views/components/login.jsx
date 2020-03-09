@@ -10,8 +10,8 @@ const Login = () => {
           </span>
           <p id="message" className="lead loginLeadMessage">This application helps EMTs log their daily activities and hours and to compare against other days. Data such as hours worked, calls taken, arrival time, etc can be recorded.</p>
           <p className="loginSecondaryMessage">Login to View Dashboard</p>
-          <br/>
-          <div id="logErrorMessage"></div>
+          <br />
+          <div id="logErrorMessage" className="errorMsg"></div>
           <hr className="my-4"></hr>
           <form>
             <div className="form-group loginInputWidth">

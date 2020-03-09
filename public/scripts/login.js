@@ -17,11 +17,11 @@ document.getElementById('signIn').addEventListener('click', event => {
         window.location.href = `/dashboard/${data.data.id}`
         } else if(emailData.data.email != data.data.email){
           console.log('it does not match')
-            document.getElementById('logErrorMessage').innerHTML = `<h1>username or email are incorrect, try again.</h1>`
+            document.getElementById('logErrorMessage').innerHTML = `<p>Username or email are incorrect, try again.</p?`
         } 
         })
         .catch(error => {
-          document.getElementById('logErrorMessage').innerHTML = `<h1>username or email are incorrect, try again.</h1>`
+          document.getElementById('logErrorMessage').innerHTML = `<p>username or email are incorrect, try again.</p>`
         })
       })
       .catch(error => {

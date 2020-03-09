@@ -1,5 +1,5 @@
 .b-login {
-  background-image:url(../images/EMTblue.jpg)!important;
+  background-image: url(../images/EMTblue.jpg)!important;
   background-color: transparent;
   width: 100vw;
   height: 100vh;
@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,7 +19,6 @@ body {
 p {
   font-family: 'Maven Pro', sans-serif !important;
 }
-
 
 label {
   display: inline-block;
@@ -74,8 +73,7 @@ label {
   color: #007bff;
 }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
+.sidebar .nav-link:hover .feather, .sidebar .nav-link.active .feather {
   color: inherit;
 }
 
@@ -126,6 +124,7 @@ label {
 /*
 End Sidebar stuff
 */
+
 .form-control {
   display: block;
   width: 100%;
@@ -152,16 +151,17 @@ End Sidebar stuff
   color: #fff !important;
   margin-left: auto;
   margin-right: auto;
-  background-color:transparent;
+  background-color: transparent;
   font-weight: 400;
 }
-.mb-4,
-.my-4 {
+
+.mb-4, .my-4 {
   margin-bottom: 0.5rem !important;
   margin-top: 2.5rem !important;
   border-bottom: 1px double #fff;
   width: 30%;
 }
+
 .outerContainer {
   margin-top: 5rem;
   margin-bottom: 2rem;
@@ -179,7 +179,6 @@ End Sidebar stuff
   font-size: 1.5rem;
   font-weight: 300;
   font-family: 'Maven Pro', sans-serif !important;
-
 }
 
 .loginSecondaryMessage {
@@ -196,7 +195,6 @@ End Sidebar stuff
   margin-left: .09rem;
 }
 
-
 .loginCreateAcctBtn {
   margin-top: 1rem;
   margin-right: 0rem;
@@ -208,6 +206,7 @@ End Sidebar stuff
 }
 
 /* Button Effects */
+
 .btn-hover {
   color: #fff;
   cursor: pointer;
@@ -239,7 +238,6 @@ End Sidebar stuff
   transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -moz-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -ms-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
-
 }
 
 .btn-hover:focus {
@@ -262,15 +260,11 @@ End Sidebar stuff
   outline: none;
 }
 
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled),
-button:not(:disabled) {
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
   cursor: pointer;
 }
 
-body::after,
-body::before {
+body::after, body::before {
   content: '';
   display: block;
   position: absolute;
@@ -297,6 +291,7 @@ body::before {
 }
 
 /* MEDIA QUERIES */
+
 @media only screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 900px) {}
@@ -312,4 +307,13 @@ body::before {
   transition-delay: 0.2s !important;
   overflow: hidden;
   float: right;
+}
+
+.errorMsg {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: #f95252;
 }
