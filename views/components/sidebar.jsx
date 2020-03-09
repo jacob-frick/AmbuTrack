@@ -10,6 +10,7 @@ const SideBar = props => {
                             <li className="nav-item"><a className="nav-link" href={`/dashboard/${props.user.id}`}>Dashboard</a></li>
                             <li className="nav-item"><a className="nav-link" href={`/profile/${props.user.id}`}>Profile</a></li>
                             <li className="nav-item"><a className="nav-link" href={`/createLog/${props.user.id}`}>Create Log</a></li>
+                            <li className="nav-item"><a className="nav-link" href={`/}`}>Sign Out</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -18,6 +19,7 @@ const SideBar = props => {
                 </main>
             </div>
         </div>
+        
     )
 }
 module.exports = SideBar

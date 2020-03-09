@@ -9,18 +9,19 @@ const CreateLog = props => {
             <Navbar user={props.userData} />
             <SideBar user={props.userData}>
                 <div className="container">
-                    <form>
-                        <FormItem title='Enter Date' id='date' forItem='date' desc='dateInput' />
-                        <FormItem title='Minutes Holding Wall' id='holdWall' forItem='holdWall' desc='minsHoldWall' />
-                        <FormItem title='Enter times BLS' id='bls' forItem='bls' desc='blsInput' />
-                        <FormItem title='Enter times ALS' id='als' forItem='als' desc='alsInput' />
-                        <FormItem title='Enter total number of calls' id='calls' forItem='calls' desc='callsInput' />
+                    <form id="logForm">
+                        <div id="logCreationMessage" className="logMessage"></div>
+                        <label>Enter date</label>
+                        <input type="date" className="form-control" id='date'></input>
+                        <FormItem title='Minutes Holding Wall' id='holdWall' forItem='holdWall' desc='minsHoldWall'/>
+                        <FormItem title='Enter times BLS (Basic Life Support)' id='bls' forItem='bls' desc='blsInput' />
+                        <FormItem title='Enter times ALS (Avanced Life Support)' id='als' forItem='als' desc='alsInput' />
                         <FormItem title='Enter cancel times' id='cancels' forItem='cancels' desc='cancelsInput' />
                         <FormItem title='Enter location' id='location' forItem='location' desc='cancelsInput' />
                         <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <script src="./scripts/createLog.js"></script>
+                <script src="/scripts/createLog.js"></script>
             </SideBar>
         </Html>
     )
