@@ -215,7 +215,6 @@ End Sidebar stuff
   border: .1rem solid #fff;
   background-size: 300% 100%;
   border-radius: .3rem;
-  moz-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -o-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -webkit-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
@@ -235,7 +234,6 @@ End Sidebar stuff
 
 .btn-hover:hover {
   background-position: 100% 0;
-  moz-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -o-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   -webkit-transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
   transition: all 1s cubic-bezier(0.42, 0, 0.05, 0.82) !important;
