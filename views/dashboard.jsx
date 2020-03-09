@@ -7,7 +7,7 @@ const Dashboard = props => {
     return (
         <Html bclass=''>
             <Navbar user={props.userData} />
-            <SideBar uid={props.userData}>
+            <SideBar user={props.userData}>
                 <Accordion log={props.log} />
             </SideBar>
             <script defer src="/scripts/dashboard.js"></script>
