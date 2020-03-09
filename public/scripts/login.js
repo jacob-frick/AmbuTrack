@@ -21,7 +21,7 @@ document.getElementById('signIn').addEventListener('click', event => {
         } 
         })
         .catch(error => {
-          document.getElementById('logErrorMessage').innerHTML = `<p>username or email are incorrect, try again.</p>`
+          document.getElementById('logErrorMessage').innerHTML = `<p>Username or email are incorrect, try again.</p>`
         })
       })
       .catch(error => {
