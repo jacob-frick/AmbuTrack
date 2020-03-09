@@ -1,5 +1,5 @@
 .b-login {
-  background-image: url(../images/EMTblue.jpg)!important;
+  background-image: url(../images/EMTblue.jpg) !important;
   background-color: transparent;
   width: 100vw;
   height: 100vh;
@@ -73,7 +73,8 @@ label {
   color: #007bff;
 }
 
-.sidebar .nav-link:hover .feather, .sidebar .nav-link.active .feather {
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
   color: inherit;
 }
 
@@ -148,14 +149,22 @@ End Sidebar stuff
 
 .jumbotron {
   max-width: 95%;
+  padding: 1rem;
   color: #fff !important;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent;
+  margin-top: 1rem;
+  background-color: #000000c2;
   font-weight: 400;
+  border-radius: 1.3rem;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
-.mb-4, .my-4 {
+.mb-4,
+.my-4 {
   margin-bottom: 0.5rem !important;
   margin-top: 2.5rem !important;
   border-bottom: 1px double #fff;
@@ -176,8 +185,9 @@ End Sidebar stuff
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
+  text-align: center;
   font-family: 'Maven Pro', sans-serif !important;
 }
 
@@ -260,11 +270,15 @@ End Sidebar stuff
   outline: none;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
   cursor: pointer;
 }
 
-body::after, body::before {
+body::after,
+body::before {
   content: '';
   display: block;
   position: absolute;
@@ -300,6 +314,17 @@ body::after, body::before {
 
 @media only screen and (max-width: 600px) {}
 
+@media only screen and (max-width: 349px) {
+  .mb-4,
+  .my-4 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 2.5rem !important;
+    border-bottom: 1px double #fff;
+    width: 17rem;
+  }
+  
+}
+
 .btnCreateNewUser {
   position: relative;
   z-index: 1;
@@ -313,7 +338,10 @@ body::after, body::before {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 1.4rem;
-  margin-top: 2rem;
+  font-size: 1rem;
+  margin-bottom: -1rem;
   color: #f95252;
+  /* position: absolute; */
+  z-index: -1;
+  margin-top: 1rem;
 }
