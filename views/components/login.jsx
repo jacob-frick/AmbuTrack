@@ -6,7 +6,7 @@ const Login = () => {
         <img className="ambutrackHeaderLogo" src="images/customLogoOne.png"></img>
         <div className="splashJumbotron col-md-12">
           <span className="gridContents"></span>
-          <p id="message" className="lead loginLeadMessage">This application helps EMTs log their daily activities and hours and to compare against other days. Data such as hours worked, calls taken, arrival time, etc can be recorded.</p>
+          <p id="message" className="lead loginLeadMessage">The Complete EMT Critical Data Log</p>
           <p className="loginSecondaryMessage">Login to View Dashboard</p>
           <br />
           <div id="logErrorMessage" className="errorMsg"></div>
