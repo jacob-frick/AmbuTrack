@@ -73,8 +73,7 @@ label {
   color: #007bff;
 }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
+.sidebar .nav-link:hover .feather, .sidebar .nav-link.active .feather {
   color: inherit;
 }
 
@@ -140,6 +139,10 @@ End Sidebar stuff
   border: 1px solid #63b5fc;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -moz-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .text-muted {
@@ -157,18 +160,17 @@ End Sidebar stuff
   background-color: #000000c2;
   font-weight: 400;
   border-radius: 1.3rem;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
-.mb-4,
-.my-4 {
+.mb-4, .my-4 {
   margin-bottom: 0.5rem !important;
   margin-top: 2.5rem !important;
   border-bottom: 1px double #fff;
-  width: 30%;
+  width: 20rem;
 }
 
 .outerContainer {
@@ -270,15 +272,11 @@ End Sidebar stuff
   outline: none;
 }
 
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled),
-button:not(:disabled) {
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
   cursor: pointer;
 }
 
-body::after,
-body::before {
+body::after, body::before {
   content: '';
   display: block;
   position: absolute;
@@ -315,14 +313,12 @@ body::before {
 @media only screen and (max-width: 600px) {}
 
 @media only screen and (max-width: 349px) {
-  .mb-4,
-  .my-4 {
+  .mb-4, .my-4 {
     margin-bottom: 0.5rem !important;
     margin-top: 2.5rem !important;
     border-bottom: 1px double #fff;
     width: 17rem;
   }
-  
 }
 
 .btnCreateNewUser {
@@ -343,5 +339,9 @@ body::before {
   color: #f95252;
   /* position: absolute; */
   z-index: -1;
+  margin-top: 1rem;
+}
+
+.spaceClass {
   margin-top: 1rem;
 }
