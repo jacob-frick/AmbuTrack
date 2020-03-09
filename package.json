@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/JFrick1992/AmbuTrack#readme",
   "dependencies": {
+    "blob-stream": "^0.1.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
     "mdbootstrap": "^4.14.0",
     "mysql2": "^2.1.0",
     "passport": "^0.4.1",
+    "pdfkit": "^0.11.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "sequelize": "^5.21.5"
