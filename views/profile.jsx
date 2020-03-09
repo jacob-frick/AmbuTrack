@@ -11,12 +11,13 @@ const Profile = props => {
 
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
-            <h1>Profile</h1>
+            <h1 className="display-4">Profile</h1>
             <hr/>
             <h3>User name: {`${props.userData.firstName} ${props.userData.lastName}`}</h3>
             <h3>User Id: {props.userData.id}</h3>
             <h3>Username: {props.userData.username}</h3>
             <h3>Email: {props.userData.email}</h3>
+            {/* <h3>Total logs: {props.}</h3> */}
           </div>
         </div>
       </SideBar>
