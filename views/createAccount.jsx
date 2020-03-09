@@ -7,7 +7,7 @@ const CreateAccount = props => {
         <div className="container outerContainer">
           <div className="row">
             <img className="ambutrackHeaderLogo" src="images/customLogoOne.png"></img>
-            <div className="jumbotron col-md-12">
+            <div className="splashJumbotron col-md-12">
               <span className="gridContents"></span>
               <form>
                 <div className="form-group">

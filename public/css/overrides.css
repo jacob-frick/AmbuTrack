@@ -153,19 +153,32 @@ End Sidebar stuff
 .jumbotron {
   max-width: 95%;
   padding: 1rem;
-  color: #fff !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  /* background-color: #000000c2; */
+  font-weight: 400;
+  border-radius: 1.3rem;
+  -webkit-border-radius: 1.3rem;
+  -moz-border-radius: 1.3rem;
+  -ms-border-radius: 1.3rem;
+  -o-border-radius: 1.3rem;
+}
+.splashJumbotron {
+  max-width: 95%;
+  padding: 1rem;
+  color: #fff;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   background-color: #000000c2;
   font-weight: 400;
   border-radius: 1.3rem;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  -webkit-border-radius: 1.3rem;
+  -moz-border-radius: 1.3rem;
+  -ms-border-radius: 1.3rem;
+  -o-border-radius: 1.3rem;
 }
-
 .mb-4, .my-4 {
   margin-bottom: 0.5rem !important;
   margin-top: 2.5rem !important;
@@ -312,13 +325,21 @@ body::after, body::before {
 
 @media only screen and (max-width: 600px) {}
 
-@media only screen and (max-width: 349px) {
-  .mb-4, .my-4 {
-    margin-bottom: 0.5rem !important;
-    margin-top: 2.5rem !important;
-    border-bottom: 1px double #fff;
-    width: 17rem;
+@media only screen and (max-width: 401px) {
+  .ambutrackHeaderLogo {
+    width: 95% !important;
+    margin: 1rem;
+    margin-top: -5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
+    .mb-4,
+    .my-4 {
+      margin-bottom: 0.5rem !important;
+      margin-top: 2.5rem !important;
+      border-bottom: 1px double #fff;
+      width: 17rem;
+    }
 }
 
 .btnCreateNewUser {
