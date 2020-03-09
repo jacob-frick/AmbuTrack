@@ -1,8 +1,6 @@
 const id = localStorage.getItem('id')
-
-
 const createLog = () => {
-  axios.post('api/log', {
+  axios.post('/api/log', {
     date: document.getElementById('date').value,
     holdWall: document.getElementById('holdWall').value,
     bls: document.getElementById('bls').value,
@@ -17,6 +15,6 @@ const createLog = () => {
 document.getElementById('createLog').addEventListener('click', event => {
   event.preventDefault()
   createLog()
-  window.location.href = `/dashboard/${id}`
+  // window.location.href = `/dashboard/${id}`
 })
 
