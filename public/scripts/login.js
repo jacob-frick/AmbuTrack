@@ -16,17 +16,16 @@ document.getElementById('signIn').addEventListener('click', event => {
         console.log('its a match')
         window.location.href = `/dashboard/${data.data.id}`
         } else if(emailData.data.email != data.data.email){
-          console.log('email is does not match')
-          
+          console.log('it does not match')
+            document.getElementById('logErrorMessage').innerHTML = `<h1>username or email are incorrect, try again.</h1>`
         } 
         })
         .catch(error => {
-          window.location.href = '/createAccount'
+          document.getElementById('logErrorMessage').innerHTML = `<h1>username or email are incorrect, try again.</h1>`
         })
-        
       })
       .catch(error => {
-        window.location.href = '/createAccount'
+        console.error(error)
       })
   })
 
