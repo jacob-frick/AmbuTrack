@@ -16,3 +16,4 @@ document.getElementById('btnCreateUser').addEventListener('click', event => {
   window.location.href = '/login'
 })
 
+
