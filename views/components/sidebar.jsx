@@ -15,7 +15,7 @@ const SideBar = props => {
                     </div>
                 </nav>
                 <main role="main" className="col-sm-9 ml-auto col-lg-10 pt-3 px-4">
-                        {props.children}
+                    {props.children}
                 </main>
             </div>
         </div>

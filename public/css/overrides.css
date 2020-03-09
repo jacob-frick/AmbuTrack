@@ -1,5 +1,5 @@
 .b-login {
-  background-image: url(../images/EMTblue.jpg)!important;
+  background-image: url(../images/EMTblue.jpg) !important;
   background-color: transparent;
   width: 100vw;
   height: 100vh;
@@ -139,6 +139,10 @@ End Sidebar stuff
   border: 1px solid #63b5fc;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -moz-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .text-muted {
@@ -146,20 +150,27 @@ End Sidebar stuff
   font-size: smaller;
 }
 
-/* .jumbotron {
+
+.splashJumbotron {
   max-width: 95%;
-  color: #fff !important;
+  padding: 1rem;
+  color: #fff;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent;
+  margin-top: 1rem;
+  background-color: #000000c2;
   font-weight: 400;
-} */
-
+  border-radius: 1.3rem;
+  -webkit-border-radius: 1.3rem;
+  -moz-border-radius: 1.3rem;
+  -ms-border-radius: 1.3rem;
+  -o-border-radius: 1.3rem;
+}
 .mb-4, .my-4 {
   margin-bottom: 0.5rem !important;
   margin-top: 2.5rem !important;
   border-bottom: 1px double #fff;
-  width: 30%;
+  width: 20rem;
 }
 
 .outerContainer {
@@ -176,8 +187,9 @@ End Sidebar stuff
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
+  text-align: center;
   font-family: 'Maven Pro', sans-serif !important;
 }
 
@@ -300,6 +312,23 @@ body::after, body::before {
 
 @media only screen and (max-width: 600px) {}
 
+@media only screen and (max-width: 401px) {
+  .ambutrackHeaderLogo {
+    width: 95% !important;
+    margin: 1rem;
+    margin-top: -5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .mb-4,
+    .my-4 {
+      margin-bottom: 0.5rem !important;
+      margin-top: 2.5rem !important;
+      border-bottom: 1px double #fff;
+      width: 17rem;
+    }
+}
+
 .btnCreateNewUser {
   position: relative;
   z-index: 1;
@@ -313,7 +342,15 @@ body::after, body::before {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 1.4rem;
-  margin-top: 2rem;
+  font-size: 1rem;
+  margin-bottom: -1rem;
   color: #f95252;
+  /* position: absolute; */
+  z-index: -1;
+  margin-top: 1rem;
 }
+
+.spaceClass {
+  margin-top: 1rem;
+}
+
