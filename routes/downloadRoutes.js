@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { User, Log } = require('../models')
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
-const blobStream  = require('blob-stream');
+const blobStream = require('blob-stream');
 
 function formatLogs(logs) {
     let formatLogs = []
@@ -44,6 +44,7 @@ router.get('/download/:uid', (req, res) => {
                     const log = JSON.parse(JSON.stringify(logs))
                     let ws = fs.createWriteStream(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
                     doc.pipe(ws)
+                    doc.info.Title=`${userData.username}.pdf`
                     doc.moveDown()
                     doc.image(`${__dirname}/../public/images/customLogoOne.png`, 50, 15, { width: 500, align: 'right' })
                     const formattedLogs = formatLogs(log)
@@ -69,12 +70,18 @@ router.get('/download/:uid', (req, res) => {
                     doc.list(formattedLogs, { listType: 'bulletRadius', align: 'left' })
                     doc.end()
                     ws.on('finish', () => {
-                        res.download(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
+                        fs.readFile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`, function (err, data) {
+                            res.contentType('application/pdf');
+                            res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
+                            res.send(data);
+                        })
                     })
+                    //res.sendfile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
                 })
         })
-    
-    // Pipe its output somewhere, like to a file or HTTP response
-    // See below for browser usage
 })
+
+// Pipe its output somewhere, like to a file or HTTP response
+// See below for browser usage
+
 module.exports = router
