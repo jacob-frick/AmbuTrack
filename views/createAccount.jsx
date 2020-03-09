@@ -11,7 +11,7 @@ const CreateAccount = props => {
               <span className="gridContents"></span>
               <form>
                 <div className="form-group">
-                  <div className="row">
+                  <div className="row spaceClass">
                     <div className="col">
                       <label htmlFor="firstName">First Name</label>
                       <input id="firstName" type="text" className="form-control" placeholder="First Name" />
@@ -22,7 +22,7 @@ const CreateAccount = props => {
                     </div>
                   </div>
                   <div className="form-group">
-                    <div className="row">
+                    <div className="row spaceClass">
                       <div className="col">
                         <label htmlFor="email">Email Address</label>
                         <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
@@ -36,7 +36,7 @@ const CreateAccount = props => {
                   </div>
                   <div className="form-group">
                     <div className="col">
-                      <div className="row">
+                      <div className="row spaceClass">
                         <label htmlFor="employer">Employer Name</label>
                         <input type="text" className="form-control" id="employer" />
                       </div>
