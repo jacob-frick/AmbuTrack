@@ -19,6 +19,7 @@ const SideBar = props => {
                 </main>
             </div>
         </div>
+        
     )
 }
 module.exports = SideBar
