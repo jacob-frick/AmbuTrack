@@ -20,7 +20,7 @@ const CreateLog = props => {
                         <button id="createLog" type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <script src="./scripts/createLog.js"></script>
+                <script src="/scripts/createLog.js"></script>
             </SideBar>
         </Html>
     )
