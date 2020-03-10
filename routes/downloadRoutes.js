@@ -41,6 +41,7 @@ router.get('/download/pdf/:uid', (req, res)=>{
 router.get('/pdf/:uid', (req, res) => {
     // Create a document
     const doc = new PDFDocument();
+  
     User.findOne({ where: { id: req.params.uid } })
         .then(user => {
             const userData = JSON.parse(JSON.stringify(user))
@@ -82,7 +83,7 @@ router.get('/pdf/:uid', (req, res) => {
                         //     res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
                         //     res.send(data);
                         // })
-                        if (/Android/.test(req.headers['user-agent']) || /iPhone/.test(req.headers['user-agent'])) {
+                        if (/iPhone||iPad||Android/.test(req.headers['user-agent'])) {
                             res.download(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
                         } else {
                             res.render('displayPDF', { userData, current: 'down' })
