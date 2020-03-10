@@ -1,4 +1,4 @@
-console.log('hello')
+
 const id = localStorage.getItem('id')
 
 axios.get(`/api/log/user/${id}`)
