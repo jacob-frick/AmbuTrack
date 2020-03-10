@@ -6,7 +6,7 @@ const Accordion = require('./components/accordion.jsx')
 const Dashboard = props => {
     return (
         <Html bclass=''>
-            <Navbar user={props.userData} />
+            <Navbar user={props.userData} current={props.current} />
             <SideBar user={props.userData}>
                 <Accordion log={props.log} />
             </SideBar>

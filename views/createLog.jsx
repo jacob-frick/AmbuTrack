@@ -6,7 +6,7 @@ const SideBar = require('./components/sidebar.jsx')
 const CreateLog = props => {
     return (
         <Html>
-            <Navbar user={props.userData} />
+            <Navbar user={props.userData} current={props.current} />
             <SideBar user={props.userData}>
                 <div className="container">
                     <form id="logForm">

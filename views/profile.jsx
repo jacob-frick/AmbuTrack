@@ -5,7 +5,7 @@ const SideBar = require('./components/sidebar.jsx')
 const Profile = props => {
   return (
     <Html>
-      <Navbar user={props.userData} />
+      <Navbar user={props.userData} current={props.current} />
       <SideBar user={props.userData}>
         
 

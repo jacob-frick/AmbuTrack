@@ -27,7 +27,7 @@ router.get('/dashboard/:uid', (req, res) => {
             })
             User.findOne({where: {id: req.params.uid}})
             .then(user=> {
-                res.render('dashboard',{log: l, userData:  JSON.parse(JSON.stringify(user))})
+                res.render('dashboard',{log: l, userData:  JSON.parse(JSON.stringify(user)), current: 'dashboard'})
             })
         })
         .catch(e => console.error(e))
@@ -36,14 +36,14 @@ router.get('/dashboard/:uid', (req, res) => {
 router.get('/profile/:uid', (req, res) => {
     User.findOne({where: {id: req.params.uid}})
     .then(user => {
-        res.render('profile', { userData:  JSON.parse(JSON.stringify(user)) })
+        res.render('profile', { userData:  JSON.parse(JSON.stringify(user)), current: 'profile' })
     })
 })
 
 router.get('/createLog/:uid', (req, res) => {
     User.findOne({where: {id: req.params.uid}})
     .then(user=> {
-        res.render('createLog',{userData:  JSON.parse(JSON.stringify(user))})
+        res.render('createLog',{userData:  JSON.parse(JSON.stringify(user)), current: 'createlog'})
     })
 })
 
@@ -53,10 +53,6 @@ router.get('/log/:lid', (req, res) => {
         res.render('viewLog', JSON.parse(JSON.stringify(log)))
     })
     .catch(e => console.error(e))
-})
-
-router.get('/dashboard', (req, res) => {
-    res.render('dashboard')
 })
 
 module.exports = router
