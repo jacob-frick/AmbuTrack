@@ -6,7 +6,7 @@ axios.get(`/api/log/user/${id}`)
   .then((data) => {
     let totalLogs
     console.log(data)
-    for (i = 0; i < data.data.length; i++){
+    for (i = 0; i <= data.data.length; i++){
     totalLogs = i 
     }
     document.getElementById('totalLogs').innerHTML = totalLogs
