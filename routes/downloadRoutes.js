@@ -31,7 +31,7 @@ function sumAllCalls(log) {
     })
     return count
 }
-router.get('/:uid', (req, res) => {
+router.get('/pdf/:uid', (req, res) => {
 
     // Create a document
     const doc = new PDFDocument();
@@ -39,6 +39,7 @@ router.get('/:uid', (req, res) => {
         .then(user => {
             const userData = JSON.parse(JSON.stringify(user))
             fs.writeFileSync(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
+            console.log(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
             Log.findAll({ where: { userId: req.params.uid } })
                 .then(logs => {
                     const log = JSON.parse(JSON.stringify(logs))
