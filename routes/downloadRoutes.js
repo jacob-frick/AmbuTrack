@@ -83,7 +83,7 @@ router.get('/pdf/:uid', (req, res) => {
                         //     res.send(data);
                         // })
                         if (/Android/.test(req.headers['user-agent']) || /iPhone/.test(req.headers['user-agent'])) {
-                            res.render('downPDF', { userData })
+                            res.download(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
                         } else {
                             res.render('displayPDF', { userData })
                         }
