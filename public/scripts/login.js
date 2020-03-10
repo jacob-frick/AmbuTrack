@@ -7,6 +7,7 @@ document.getElementById('signIn').addEventListener('click', event => {
   event.preventDefault()
     axios.get(`/api/user/username/${document.getElementById('userName').value}`)
       .then((data) => {
+        console.log(data)
         axios.get(`/api/user/email/${document.getElementById('email').value}`)
         .then((emailData) => {
           console.log(emailData)

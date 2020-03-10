@@ -20,6 +20,6 @@ document.getElementById('createLog').addEventListener('click', event => {
   createLog()
   document.getElementById("logForm").reset();
   document.getElementById('logCreationMessage').innerHTML = `<p> Log Created </p>`
-  // window.location.href = `/dashboard/${id}`
+  
 })
 
