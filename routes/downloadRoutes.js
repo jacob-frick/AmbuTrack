@@ -42,11 +42,11 @@ router.get('/pdf/:uid', (req, res) => {
             Log.findAll({ where: { userId: req.params.uid } })
                 .then(logs => {
                     const log = JSON.parse(JSON.stringify(logs))
-                    let ws = fs.createWriteStream(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
+                    let ws = fs.createWriteStream(`${__dirname}/public/userGenPDFs/${userData.username}.pdf`)
                     doc.pipe(ws)
                     doc.info.Title=`${userData.username}.pdf`
                     doc.moveDown()
-                    doc.image(`${__dirname}/../public/images/customLogoOne.png`, 50, 15, { width: 500, align: 'right' })
+                    doc.image(`${__dirname}/public/images/customLogoOne.png`, 50, 15, { width: 500, align: 'right' })
                     const formattedLogs = formatLogs(log)
                     const count = sumAllCalls(log)
                     doc.moveDown()
@@ -75,7 +75,7 @@ router.get('/pdf/:uid', (req, res) => {
                         //     res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
                         //     res.send(data);
                         // })
-                        res.render('displayPDF', {userData, filepath: `${__dirname}/../public/userGenPDFs/${userData.username}.pdf`})
+                        res.render('displayPDF', {userData, filepath: `${__dirname}/public/userGenPDFs/${userData.username}.pdf`})
                     })
                     //res.sendfile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
                 })
