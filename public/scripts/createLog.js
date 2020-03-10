@@ -1,7 +1,10 @@
 const id = localStorage.getItem('id')
 const createLog = () => {
+  let d = document.getElementById('date').value
+  let e = d.split('-')
+  let s = `${e[1]}/${e[2]}/${e[0]}`
   axios.post('/api/log', {
-    date: document.getElementById('date').value,
+    date: s,
     holdWall: document.getElementById('holdWall').value,
     bls: document.getElementById('bls').value,
     als: document.getElementById('als').value,

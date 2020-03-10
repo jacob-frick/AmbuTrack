@@ -31,18 +31,19 @@ function sumAllCalls(log) {
     })
     return count
 }
-router.get('/download/:uid', (req, res) => {
+router.get('/pdf/:uid', (req, res) => {
 
     // Create a document
     const doc = new PDFDocument();
     User.findOne({ where: { id: req.params.uid } })
         .then(user => {
             const userData = JSON.parse(JSON.stringify(user))
-            fs.writeFileSync(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
+            fs.writeFileSync(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
+            console.log(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
             Log.findAll({ where: { userId: req.params.uid } })
                 .then(logs => {
                     const log = JSON.parse(JSON.stringify(logs))
-                    let ws = fs.createWriteStream(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
+                    let ws = fs.createWriteStream(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
                     doc.pipe(ws)
                     doc.info.Title=`${userData.username}.pdf`
                     doc.moveDown()
@@ -70,11 +71,12 @@ router.get('/download/:uid', (req, res) => {
                     doc.list(formattedLogs, { listType: 'bulletRadius', align: 'left' })
                     doc.end()
                     ws.on('finish', () => {
-                        fs.readFile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`, function (err, data) {
-                            res.contentType('application/pdf');
-                            res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
-                            res.send(data);
-                        })
+                        // fs.readFile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`, function (err, data) {
+                        //     res.contentType('application/pdf');
+                        //     res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
+                        //     res.send(data);
+                        // })
+                        res.render('displayPDF', {userData})
                     })
                     //res.sendfile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
                 })
