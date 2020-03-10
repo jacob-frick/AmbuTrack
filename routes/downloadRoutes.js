@@ -31,8 +31,14 @@ function sumAllCalls(log) {
     })
     return count
 }
+router.get('/download/pdf/:uid', (req, res)=>{
+    User.findOne({ where: { id: req.params.uid } })
+    .then(user => {
+        const userData = JSON.parse(JSON.stringify(user))
+        res.attachment(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
+    })
+})
 router.get('/pdf/:uid', (req, res) => {
-
     // Create a document
     const doc = new PDFDocument();
     User.findOne({ where: { id: req.params.uid } })
@@ -45,7 +51,7 @@ router.get('/pdf/:uid', (req, res) => {
                     const log = JSON.parse(JSON.stringify(logs))
                     let ws = fs.createWriteStream(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
                     doc.pipe(ws)
-                    doc.info.Title=`${userData.username}.pdf`
+                    doc.info.Title = `${userData.username}.pdf`
                     doc.moveDown()
                     doc.image(`${__dirname}/../public/images/customLogoOne.png`, 50, 15, { width: 500, align: 'right' })
                     const formattedLogs = formatLogs(log)
@@ -76,7 +82,11 @@ router.get('/pdf/:uid', (req, res) => {
                         //     res.setHeader('Content-disposition', `inline; filename="${userData.username}"`);
                         //     res.send(data);
                         // })
-                        res.render('displayPDF', {userData})
+                        if (/Android/.test(req.headers['user-agent']) || /iPhone/.test(req.headers['user-agent'])) {
+                            res.render('downPDF', { userData })
+                        } else {
+                            res.render('displayPDF', { userData })
+                        }
                     })
                     //res.sendfile(`${__dirname}/../userGenPDFs/${userData.username}.pdf`)
                 })
