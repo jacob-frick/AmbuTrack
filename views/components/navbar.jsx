@@ -15,9 +15,9 @@ const Navbar = props => {
             <a className="nav-link" href={`/profile/${props.user.id}`}>Profile</a>
           </li>
           <li className={`nav-item ${props.current === 'createlog' ? 'active' : ''}`}>
-            <a className="nav-link" href={`/createLog/${props.user.id}`}>Create Log</a>
+            <a id="down-nav" className="nav-link" href={`/createLog/${props.user.id}`}>Create Log</a>
           </li>
-          <li className={`nav-item ${props.current === 'down' ? 'active' : ''}`}>
+          <li className={`nav-item ${props.current === 'down' ? 'active' : ''}`} data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
             <a className="nav-link" href={`/pdf/${props.user.id}`}>View My Data</a>
           </li>
           <li className="nav-item">
@@ -26,6 +26,7 @@ const Navbar = props => {
         </ul>
       </div>
     </nav>
+
   )
 }
 module.exports = Navbar
