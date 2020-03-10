@@ -9,7 +9,7 @@ const createUser = () => {
   .then(user =>  {
     let r = JSON.parse(JSON.stringify(user))
     localStorage.setItem('id', r.data.id)
-    window.location.href = `/dashboard/${r.data.id}`
+    window.location.href = `/profile/${r.data.id}`
   })
 }
 
