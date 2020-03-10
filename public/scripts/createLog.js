@@ -19,7 +19,7 @@ document.getElementById('createLog').addEventListener('click', event => {
   event.preventDefault()
   createLog()
   document.getElementById("logForm").reset();
-  document.getElementById('logCreationMessage').innerHTML = `<p> Log Created </p>`
+  document.getElementById('logCreationMessage').innerHTML = `<h2> Log Created </h2>`
   
 })
 
