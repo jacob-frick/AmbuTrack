@@ -38,7 +38,7 @@ router.get('/pdf/:uid', (req, res) => {
     User.findOne({ where: { id: req.params.uid } })
         .then(user => {
             const userData = JSON.parse(JSON.stringify(user))
-            fs.writeFileSync(`${__dirname}/../public/userGenPDFs/${userData.username}.pdf`)
+            fs.writeFileSync(`${__dirname}/public/userGenPDFs/${userData.username}.pdf`)
             Log.findAll({ where: { userId: req.params.uid } })
                 .then(logs => {
                     const log = JSON.parse(JSON.stringify(logs))
