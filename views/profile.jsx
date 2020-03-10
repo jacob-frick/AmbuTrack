@@ -7,17 +7,13 @@ const Profile = props => {
     <Html>
       <Navbar user={props.userData} current={props.current} />
       <SideBar user={props.userData}>
-        
-
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1>Profile</h1>
-            <hr/>
-            <h3>User name: {`${props.userData.firstName} ${props.userData.lastName}`}</h3>
-            <h3>User Id: {props.userData.id}</h3>
-            <h3>Username: {props.userData.username}</h3>
-            <h3>Email: {props.userData.email}</h3>
-          </div>
+        <div className="row">
+          <div className="h2 col-12">User details:</div>
+          <div className="h4 col-12">{`First Name: ${props.userData.firstName}`}</div>
+          <div className="h4 col-12">{`Last Name: ${props.userData.lastName}`}</div>
+          <div className="h4 col-12">{`Employer: ${props.userData.employer}`}</div>
+          <div className="h4 col-12">{`Email: ${props.userData.email}`}</div>
+          <div className="h4 col-12">{`Username: ${props.userData.username}`}</div>
         </div>
       </SideBar>
 
