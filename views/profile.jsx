@@ -7,17 +7,33 @@ const Profile = props => {
     <Html>
       <Navbar user={props.userData} current={props.current} />
       <SideBar user={props.userData}>
-        <div className="row">
-          <div className="h2 col-12">User details:</div>
-          <div className="h4 col-12">{`First Name: ${props.userData.firstName}`}</div>
-          <div className="h4 col-12">{`Last Name: ${props.userData.lastName}`}</div>
-          <div className="h4 col-12">{`Employer: ${props.userData.employer}`}</div>
-          <div className="h4 col-12">{`Email: ${props.userData.email}`}</div>
-          <div className="h4 col-12">{`Username: ${props.userData.username}`}</div>
+        
+
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">Profile</h1>
+            <hr/>
+            <h5>Name:</h5>
+            <h3>{`${props.userData.firstName} ${props.userData.lastName}`}</h3>
+            <hr/>
+            <h5>User Id:</h5>
+            <h3>{props.userData.id}</h3>
+            <hr/>
+            <h5>Username:</h5>
+            <h3>{props.userData.username}</h3>
+            <hr/>
+            <h5>Email:</h5>
+            <h3>{props.userData.email}</h3>
+            <hr/>
+            <h5>Total Logs:</h5>
+            <h3 id="totalLogs"></h3>
+            
+          </div>
         </div>
+        <script defer src="/scripts/profile.js"></script>
       </SideBar>
 
-
+      
     </Html>
   )
 }
